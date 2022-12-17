@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "InNZEFwduiGbF8C8hry3LPB5JDyduhuLFopP6HBM0pYla6gvVeYe9EkqPn3mrFCohr7X178VDBTguuoCnBoAsg==",
+  "success": true,
+  "projectFilePath": "D:\\AdaniTeams\\AdaniCall.Business\\AdaniCall.Business.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\prashant.kashid\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
