@@ -351,7 +351,6 @@
     <Content Include="images\logos\gophygital_logo.png" />
     <Content Include="images\logos\microsoft_azure_logo.png" />
     <Content Include="images\ringing-call.gif" />
-    <Content Include="js\bundle.js" />
     <Content Include="js\camvas.js" />
     <Content Include="js\common.js" />
     <Content Include="js\custom-landingpages.js" />

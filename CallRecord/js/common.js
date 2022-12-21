@@ -537,7 +537,10 @@ function ShowThankYouMsg() {
                     thankyouStatus = 0;
                     //startVisible = true;
                     faceSpotted = false;
-                    $(".call-btnContainer").removeAttr("style");
+                    setTimeout(function () {
+                        $(".call-btnContainer").removeAttr("style");
+                    }, 1000);
+                  
                   
                     //history.go(-2);
                    // window.location.href = '/Landing/Index';
