@@ -284,9 +284,9 @@ function ShowDefaultScreen(frm) {
                 //if (LoadCallCount > LoadCountAllowed) {
                 //history.go(-2);
                 FreeAgent($("#callee-acs-user-id").val(), '7commonShowDefaultScreen')
-              //  setTimeout(function () {
-                  //  window.location.href = '/Landing/Index';
-            //    }, 5000);
+                setTimeout(function () {
+                    window.location.href = '/Home/Call';
+                }, 5000);
                 //}
             }, 65000);
         }
@@ -331,9 +331,9 @@ function ShowConnectingMsg(frm) {
                 //history.go(-2);
             if (frm != "Connecting") {
                 FreeAgent($("#callee-acs-user-id").val(), '8commonShowConnectingMsg')
-               // setTimeout(function () {
-                //    window.location.href = '/Landing/Index';
-               // }, 5000);
+                setTimeout(function () {
+                    window.location.href = '/Home/Call';
+                }, 5000);
             }
             //}
         }, 45000);
@@ -537,13 +537,8 @@ function ShowThankYouMsg() {
                     thankyouStatus = 0;
                     //startVisible = true;
                     faceSpotted = false;
-                    setTimeout(function () {
-                        $(".call-btnContainer").removeAttr("style");
-                    }, 1000);
-                  
-                  
                     //history.go(-2);
-                   // window.location.href = '/Landing/Index';
+                    window.location.href = '/Home/Call';
                     //$("#allStepID").addClass("video_container_loader");
                 }
             }
@@ -663,6 +658,7 @@ $(document).ready(function () {
     if (callingPage.toLowerCase().indexOf("accept") > -1)
         intervalCheckRefreshNeeded = setInterval(CheckRefreshNeeded, 300000);//1800000 - 30mins//600000 - 10mins//900000 - 15mins//300000 - 5mins
 });
+
 
 function conversationCall() {
     BootstrapDialog.confirm({

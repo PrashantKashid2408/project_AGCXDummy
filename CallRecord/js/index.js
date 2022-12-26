@@ -138,17 +138,17 @@ function CheckStart()
 setInterval(CheckStart, 5000);
 
 function LoadCall() {
-	//if (LoadCallCount > LoadCountAllowed) {
+	if (LoadCallCount > LoadCountAllowed) {
 		//window.close();
-		//if (LoadCallCount > LoadCountAllowed) {
+		if (LoadCallCount > LoadCountAllowed) {
 			//history.go(-2);
-			//FreeAgent($("#callee-acs-user-id").val(), '11indexLoadCall')
-			//setTimeout(function () {
-				//window.location.href = '/Landing/Index';
-			//}, 5000);
-		//}
-	//}
-	//else {
+			FreeAgent($("#callee-acs-user-id").val(), '11indexLoadCall')
+			setTimeout(function () {
+				window.location.href = '/Home/Call';
+			}, 5000);
+		}
+	}
+	else {
 		console.log("this is LoadCall() :" + faceSpotted + ",wasCallConnected:" + wasCallConnected )
 		if (!faceSpotted && !wasCallConnected) {
 			//$("#user-access-token").val("eyJhbGciOiJSUzI1NiIsImtpZCI6IjEwMyIsIng1dCI6Ikc5WVVVTFMwdlpLQTJUNjFGM1dzYWdCdmFMbyIsInR5cCI6IkpXVCJ9.eyJza3lwZWlkIjoiYWNzOmFkOWNkYWRiLTY2YTUtNDVhMi04NTdmLTgwMmY0NzgwNWUzYl8wMDAwMDAwZC00NmFlLWRhYjQtNjdiMC05ZjNhMGQwMDAyYzEiLCJzY3AiOjE3OTIsImNzaSI6IjE2MzQ4ODYwMzkiLCJleHAiOjE2MzQ5NzI0MzksImFjc1Njb3BlIjoidm9pcCIsInJlc291cmNlSWQiOiJhZDljZGFkYi02NmE1LTQ1YTItODU3Zi04MDJmNDc4MDVlM2IiLCJpYXQiOjE2MzQ4ODYwMzl9.qjAB-2RxLN8bURT0wj66JUmzU1ArqLcHBP-8uBxWBrKldNo2aMTLbXPYCoHvWAG0Xsu2XnObgfwsqQRBtKiadbqxIj17XjxMToKMEfLXM5jQ9dc4JOLEzT8Eh1ke7zcCANbtDRhVjOPSV7g9Txl5MInCFpVAxL9nYi-Cd0Dj3mdLoO-uZVjpSUJzpcng686HJalhyK93Bnybu2-tSNWr1f_2CjlXe-koyVmehUyTBa9qXWpLZq-lWZyV4MOYfSnQ99sx3wCHlt--wZPTQs4XxSrAOj0gqPPh4v47FNawGP5uPNio0etq6ay-nyfr3kYhKf12vBu6Qeocd5zae3CzRA");
@@ -163,7 +163,7 @@ function LoadCall() {
 				startVisible = false;//click start if start is enabled.
 				console.log("this is face spotted:")
 				LoadCallCount = LoadCallCount + 1;
-			//}
+			}
 			//CheckStart();
 		}
     }

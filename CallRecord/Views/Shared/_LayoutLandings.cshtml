@@ -54,22 +54,19 @@
             justify-content: center !important;
         }
 
-        #divConversationCall .modal-footer .btn {
-            width: auto;
-            font-size: 25px;
-            margin: 0px;
-        }
+            #divConversationCall .modal-footer .btn {
+                width: auto;
+                font-size: 25px;
+                margin: 0px;
+            }
 
-        #divConversationCall .modal-footer .btn.btn-danger {
-            margin-right: 10px;
-        }
+                #divConversationCall .modal-footer .btn.btn-danger {
+                    margin-right: 10px;
+                }
 
-        #divConversationCall .modal-footer .btn.btn-success {
-            margin-left: 10px;
-        }
-        .bootstrap-dialog.type-warning .modal-header {
-            background-color: #ffc107;
-        }
+                #divConversationCall .modal-footer .btn.btn-success {
+                    margin-left: 10px;
+                }
     </style>
     
     @{ var _id = (HttpContext.Current.Session[KeyEnums.SessionKeys.UserId.ToString()] != null ? Convert.ToString(HttpContext.Current.Session[KeyEnums.SessionKeys.UserId.ToString()]) : ""); if (_id == "") { Response.Redirect("/User/Login"); } }

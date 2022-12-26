@@ -223,7 +223,6 @@ var callingPage = window.location.href;
                     // Subscribe to the call's properties and events.
                     subscribeToCall(call);
                 } catch (error) {
-                    window.location.href = '/Home/Call';
                     console.error("startCallButton:" + error);
                     //document.writeln(error);
                 }
@@ -536,10 +535,28 @@ var callingPage = window.location.href;
                     }
                 }
 
-                remoteVideoStream.on('isAvailableChanged', async () => 
-                {
+                //remoteVideoStream.on('isAvailableChanged', async () => {
+                //    // Participant has switched video on.
+                //    if (remoteVideoStream.isAvailable) {
+                //        console.log("this is remote video isAvailableChanged:" + remoteVideoStream.isAvailable)
+                //        await renderVideo();
+                //        // Participant has switched video off.
+                //    } 
+                //    else {
+                //        if (view) {
+                //            console.log("this is remote video isAvailableChanged: disposed")
+
+                //            view.dispose();
+                //            view = undefined;
+                //            //await renderVideo();
+                //        }
+                //        //await renderVideo();
+                //    }
+                //});
+
+                remoteVideoStream.on('isAvailableChanged', async () => {
                     //PreVideoMsg("Pre Video")
-                     // Participant has switched video on.
+                    // Participant has switched video on.
                     if (remoteVideoStream.isAvailable) {
                         $("#allStepID").removeClass("video_container_loader");
                         RemoveAllMsg()
@@ -552,7 +569,7 @@ var callingPage = window.location.href;
                             view = undefined;
                         }
                     }
-                  });
+                });
                 // Participant has video on initially.
                 if (remoteVideoStream.isAvailable) {
                     await renderVideo();
@@ -683,7 +700,6 @@ var callingPage = window.location.href;
 
             /***/
 }),
-
 /***/ "./node_modules/@azure/abort-controller/dist-esm/src/AbortController.js":
 /*!******************************************************************************!*\
   !*** ./node_modules/@azure/abort-controller/dist-esm/src/AbortController.js ***!
